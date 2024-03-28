@@ -26,6 +26,7 @@ frontend/build
 **/yarn-debug.log*
 **/yarn-error.log*
 
-doraemon_web/model/background/dreamstyler/app/data
-doraemon_web/model/background/dreamstyler/app/outputs
-doraemon_web/model/background/dreamstyler/app/results
+model/background/dreamstyler/app/data
+model/background/dreamstyler/app/outputs
+model/background/dreamstyler/app/results
+model/background/dreamstyler/app/__pycache__/*.pyc
