@@ -106,7 +106,7 @@ def background_train(style_images: List[UploadFile] = File(...)) -> None:
     )
     
     # convert to response format
-    generated_result = TrainResult(result = os.path.join("./outputs", model_name, f"{file_name}").split('/')[-1])
+    generated_result = TrainResult(result = model_name)
     
     # if we don't use train images, run this code.
     # shutil.rmtree(os.path.join(train_config.data_dir, model_name), ignore_errors=True) 

@@ -132,6 +132,9 @@ def img2img_generate(pipe, content_image, placeholder_token, num_stages,
     
     generated_images = []
     
+    if prompt is None:
+        prompt = "a painting"
+    
     prompt = prompt + " in the style of {}"
     pos_prompt = [prompt.format(f"{placeholder_token}-T{t}") for t in range(num_stages)]
     print(pos_prompt)
@@ -173,9 +176,12 @@ def txt2img_generate(pipe,
         " normal quality, blurry image, artifact"
     )
 
+    if prompt is None:
+        prompt = "a painting"
+    
     prompt = prompt + " in the style of {}"
     pos_prompt = [prompt.format(f"{placeholder_token}-T{t}") for t in range(num_stages)]
-    print(prompt)
+    print(pos_prompt)
     generated_images = []
     for _ in range(6): 
         generated_images.append(
